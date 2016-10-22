@@ -21,4 +21,5 @@ group :development, :test do
   gem 'pry'
   gem 'dotenv'
   gem 'launchy'
+  gem 'fakeweb'
 end
