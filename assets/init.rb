@@ -10,9 +10,9 @@ class App < Sinatra::Base
     sprockets.append_path File.join(root, 'assets', 'js')
     sprockets.append_path File.join(root, 'assets', 'images')
 
-    #configure_sprockets_helpers do |helpers|
+    configure_sprockets_helpers do |helpers|
       #helpers.asset_host = 'some-bucket.s3.amazon.com'
-    #end
+    end
   end
 
   configure :development do

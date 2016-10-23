@@ -1,0 +1,7 @@
+<article>
+  <% @page["sections"].each do |section| %>
+    <section>
+      <%= markdown section["Body"] %>
+    </section>
+  <% end %>
+</article>
