@@ -26,7 +26,11 @@
     <footer>
       <nav>
         <a href="http://www.thefutureproject.org/">The Future Project</a>
-        <% if @editing %><button action="/publish" method="POST">Publish</button> <% end %>
+        <% if @editing %>
+          <form method="POST" action="/publish">
+            <input type="submit" value="Publish" />
+          </form>
+        <% end %>
       </nav>
     </footer>
 
