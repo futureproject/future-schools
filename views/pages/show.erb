@@ -1,7 +1,10 @@
 <article>
   <% @page["sections"].each do |section| %>
-    <section>
-      <%= markdown section["Body"] %>
+    <section class="<%= section['Kind'].parameterize %>">
+      <div class='section-content'>
+        <h2><%= section['Headline'] %></h2>
+        <%= markdown section["Body"] %>
+      </div>
     </section>
   <% end %>
 </article>

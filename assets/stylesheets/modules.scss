@@ -1,0 +1,5 @@
+.section-content {
+  position: relative;
+  top: 50%;
+  @include transform(translateY(-50%));
+}
