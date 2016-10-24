@@ -1,0 +1,12 @@
+html {
+  font-family: 'proxima', sans-serif;
+}
+
+article > section {
+  @include linear-gradient(white, rgb(241,242,243));
+}
+
+h1, h2 {
+  font-family: 'rift', 'arial narrow', sans-serif;
+  font-weight: bold;
+}

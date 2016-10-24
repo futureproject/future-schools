@@ -6,7 +6,7 @@ class App < Sinatra::Base
   set :digest_assets, production?
 
   configure do
-    sprockets.append_path File.join(root, 'assets', 'css')
+    sprockets.append_path File.join(root, 'assets', 'stylesheets')
     sprockets.append_path File.join(root, 'assets', 'js')
     sprockets.append_path File.join(root, 'assets', 'images')
 
