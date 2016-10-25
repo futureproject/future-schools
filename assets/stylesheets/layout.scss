@@ -2,54 +2,7 @@
   box-sizing: border-box;
 }
 
-section {
-  padding: 2rem;
-  height: 100vh;
-  width: 100%;
-  position: relative;
-  overflow: hidden;
-  > div {
-    position: relative;
-    top: 50%;
-    @include transform(translateY(-50%));
-    max-width: 42rem;
-    margin-left: auto;
-    margin-right: auto;
-  }
-  header {
-    margin-bottom: 1rem;
-    margin-left: auto;
-    margin-right: auto;
-  }
-}
-
-section.text {
-  > div {
-    max-width: 40ch;
-  }
-}
-
 body > footer {
   padding: 2rem;
-}
-
-@media(min-width: 1024px) {
-  section {
-    > div {
-      @include clearfix;
-    }
-    figure {
-      float: right;
-      width: 40%;
-      background: $blue;
-      color: white;
-      height: 100%;
-    }
-    figcaption {
-      float: left;
-      width: 50%;
-      margin-right: 10%;
-    }
-  }
 }
 

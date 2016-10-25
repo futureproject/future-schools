@@ -1,0 +1,47 @@
+.slide {
+  padding: 2rem;
+  min-height: 100vh;
+  width: 100%;
+  position: relative;
+  display: table;
+  .slide-outer {
+    display: table-cell;
+    vertical-align: middle;
+  }
+  .slide-inner {
+    max-width: 42rem;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  header {
+    margin-bottom: 1rem;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  &.text {
+    .slide-inner {
+      max-width: 42ch;
+    }
+  }
+}
+
+@media(min-width: 1024px) {
+  .slide {
+    .slide-inner {
+      @include clearfix;
+    }
+    figure {
+      float: right;
+      width: 40%;
+      background: blue;
+      color: white;
+      height: 100%;
+    }
+    figcaption {
+      float: left;
+      width: 50%;
+      margin-right: 10%;
+    }
+  }
+}
+
