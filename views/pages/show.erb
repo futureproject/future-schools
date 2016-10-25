@@ -1,9 +1,17 @@
 <article>
   <% @page["slides"].each do |slide| %>
     <section class="slide <%= slide['Kind'].parameterize %>">
-      <div class='slide-content'>
-        <h2><%= slide['Headline'] %></h2>
-        <%= markdown slide["Body"] %>
+      <div>
+        <figure>
+        </figure>
+        <figcaption>
+          <h1>
+            <% slide['Headline'].split(' ').each do |word| %>
+              <span><%= word %></span>
+            <% end %>
+          </h1>
+          <%= markdown slide["Body"] %>
+        </figcaption>
       </div>
     </section>
   <% end %>
