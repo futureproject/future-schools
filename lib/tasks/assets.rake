@@ -7,6 +7,8 @@ namespace :assets do
     environment = App.settings.sprockets
     manifest = Sprockets::Manifest.new(environment.index, "#{Dir.pwd}/public#{App.settings.assets_prefix}/manifest.json")
     manifest.compile(App.settings.assets_to_compile)
+    # flush app cache on launch
+    App.cache.flush
   end
 
   desc "Clean assets"
