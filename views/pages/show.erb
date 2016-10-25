@@ -1,6 +1,6 @@
 <article>
   <% @page["slides"].each do |slide| %>
-    <% slide_type = slide['Kind'].parameterize %>
+    <% slide_type = slide.slide_type %>
     <section class="<%= slide_type %>">
       <div>
         <%= erb :"slides/_#{slide_type}", locals: { slide: slide } %>

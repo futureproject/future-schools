@@ -1,4 +1,9 @@
-$base-accent-color: rgba(135,225,255, .8);
+$blue: rgba(0,189,236,.9);
+$teal: rgba(70,218,200,.9);
+$green: rgba(172,232,72,.9);
+$orange: rgba(250,180,7,.9);
+
+$base-accent-color: $blue;
 $footer-bg: rgb(24,40,58);
 
 body {
@@ -13,9 +18,12 @@ h1, h2, h3, h4, h5, h6 { font-weight: bold; }
 section {
   @include linear-gradient(white, rgb(241,242,243));
   header {
+    h1, h2, h3, h4, h5, h6 {
+      margin: 0;
+    }
     h2 {
       line-height: 1;
-      font-size: 2.5rem;
+      font-size: 2rem;
     }
   }
   h1 {
@@ -24,7 +32,7 @@ section {
     text-transform: uppercase;
     line-height: 1;
   }
-  > h2, > h3, > p, > ul, > ol {
+  h2, h3, p, ul, ol {
     margin: 1rem auto;
   }
   ul {
@@ -36,8 +44,10 @@ section {
 }
 
 section.title {
+  h1 { line-height: 1.2; }
   header .word:nth-child(2) {
     span {
+      color: white;
       display: inline-block;
       padding: 0 .5rem;
       background: $base-accent-color;
@@ -82,5 +92,10 @@ body > footer {
 @media(min-width: 1024px) {
   html, body {
     font-size: 24px;
+  }
+  section.title {
+    header h1 {
+      font-size: 4rem;
+    }
   }
 }
