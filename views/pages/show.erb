@@ -1,9 +1,9 @@
 <article>
-  <% @page["sections"].each do |section| %>
-    <section class="<%= section['Kind'].parameterize %>">
-      <div class='section-content'>
-        <h2><%= section['Headline'] %></h2>
-        <%= markdown section["Body"] %>
+  <% @page["slides"].each do |slide| %>
+    <section class="slide <%= slide['Kind'].parameterize %>">
+      <div class='slide-content'>
+        <h2><%= slide['Headline'] %></h2>
+        <%= markdown slide["Body"] %>
       </div>
     </section>
   <% end %>

@@ -4,7 +4,7 @@ class Page < Airmodel::Model
   def self.find_by_slug(slug)
     slug = slug.downcase
     page = self.find_by("slug" => slug)
-    page["sections"] = page.ordered_sections
+    page["slides"] = page.ordered_slides
     page
   end
 
@@ -17,8 +17,8 @@ class Page < Airmodel::Model
     }
   end
 
-  def ordered_sections
-    Section.find(self.sections.reverse)
+  def ordered_slides
+    Slide.find(self.slides.reverse)
   end
 
   # override cache key to work by slug
