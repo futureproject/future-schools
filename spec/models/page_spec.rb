@@ -7,8 +7,8 @@ describe Page do
     stub_airtable_response!(
       "https://api.airtable.com/v0/#{@db[:bases]}/#{@db[:table_name]}?shard=&filterByFormula=AND%28%7Bslug%7D%3D%27home%27%29&limit=1",
       { "records" => [
-        {"id": "recXYZ", fields: {"slug" => "home", "sections" => ["recETC", "recWTF"] } },
-        {"id":"recABC", fields: {"slug" => "about", "sections" => [] } }]
+        {"id": "recXYZ", fields: {"slug" => "home", "Slides" => ["recETC", "recWTF"] } },
+        {"id":"recABC", fields: {"slug" => "about", "Slides" => [] } }]
       }
     )
     stub_airtable_response!(

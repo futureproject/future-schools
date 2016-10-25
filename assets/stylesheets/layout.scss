@@ -7,11 +7,6 @@ section {
   height: 100vh;
   width: 100%;
   position: relative;
-  position: -webkit-sticky;
-  position: -moz-sticky;
-  position: sticky;
-  top: 0;
-  left: 0;
   > div {
     position: relative;
     top: 50%;
@@ -20,9 +15,34 @@ section {
     margin-left: auto;
     margin-right: auto;
   }
+  header {
+    max-width: 20rem;
+    margin-bottom: 1rem;
+    margin-left: auto;
+    margin-right: auto;
+  }
 }
 
 body > footer {
   padding: 2rem;
+}
+
+@media(min-width: 1024px) {
+  section {
+    > div {
+      @include clearfix;
+    }
+    figure {
+      float: right;
+      width: 40%;
+      background: blue;
+      height: 100%;
+    }
+    figcaption {
+      float: left;
+      width: 50%;
+      margin-right: 10%;
+    }
+  }
 }
 
