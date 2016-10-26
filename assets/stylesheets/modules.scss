@@ -7,10 +7,15 @@
     margin-left: auto;
     margin-right: auto;
   }
+  article {
+    max-width: 50rem;
+    margin: 0 auto;
+    @include clearfix;
+  }
 }
 
 .title-slide {
-  height: 100vh;
+  height: 90vh;
   article {
     @include transform(translateY(-50%));
     position: relative;
@@ -19,9 +24,10 @@
 }
 .text-slide {
   article {
-    padding: 1rem;
+    padding: 2rem;
     margin-left: auto;
     margin-right: auto;
+    max-width: 40ch;
   }
 }
 
@@ -43,8 +49,8 @@ figure {
   overflow: hidden;
   margin-bottom: 1rem;
   img {
-    max-width: 100%;
-    max-height: 100%;
+    width: 100%;
+    height: auto;
     display: block;
   }
 }
@@ -58,16 +64,14 @@ figure {
     @include clearfix;
     figure {
       position: absolute;
-      top: 50%;
+      top: 1rem;
+      bottom: 1rem;
       width: auto;
-      height: 100%;
-      max-height: 24rem;
-      @include transform(translateY(-50%));
       img {
         position: absolute;
-        top: 50%;
-        left: 50%;
-        @include transform(translate(-50%, -50%));
+        top: 0;
+        height: 100%;
+        width: auto;
       }
     }
     figcaption {
@@ -78,12 +82,19 @@ figure {
     figure {
       left: 50%;
       right: 0;
+      img {
+        left: 1rem;
+      }
+
     }
   }
   .graphic-slide:nth-of-type(even) {
     figure {
       left: 0;
       right: 50%;
+      img {
+        right: 1rem;
+      }
     }
     figcaption {
       float: right;
@@ -106,11 +117,9 @@ figure {
   }
 }
 
+
 @media (min-width: 1024px) {
   .text-slide {
-    article {
-      padding: 6rem 12rem;
-    }
+    padding: 7rem 0;
   }
 }
-
