@@ -1,6 +1,6 @@
 <% @page["slides"].each do |slide| %>
   <% slide_type = slide.slide_type %>
-  <section class="slide <%= slide_type %>-slide">
+  <section style="<%= slide.background_tag %>" class="slide <%= slide_type %>-slide">
     <%= erb :"slides/_#{slide_type}", locals: { slide: slide } %>
   </section>
 <% end %>
