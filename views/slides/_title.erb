@@ -1,10 +1,12 @@
-<header>
-  <h1>
-    <% slide['Headline'].split(' ').each do |word| %>
-      <div class="word">
-        <span><%= word %></span>
-      </div>
-    <% end %>
-  </h1>
-</header>
-<%= markdown slide['Body'] %>
+<article>
+  <header>
+    <h1>
+      <% slide['Headline'].split(' ').each do |word| %>
+        <div class="word">
+          <span><%= word %></span>
+        </div>
+      <% end %>
+    </h1>
+  </header>
+  <%= markdown slide['Body'] %>
+</article>

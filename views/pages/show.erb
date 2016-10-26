@@ -1,12 +1,6 @@
-<article>
-  <% @page["slides"].each do |slide| %>
-    <% slide_type = slide.slide_type %>
-    <section class="slide <%= slide_type %>">
-      <div class="slide-outer">
-        <div class="slide-inner">
-        <%= erb :"slides/_#{slide_type}", locals: { slide: slide } %>
-        </div>
-      </div>
-    </section>
-  <% end %>
-</article>
+<% @page["slides"].each do |slide| %>
+  <% slide_type = slide.slide_type %>
+  <section class="slide <%= slide_type %>-slide">
+    <%= erb :"slides/_#{slide_type}", locals: { slide: slide } %>
+  </section>
+<% end %>

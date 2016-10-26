@@ -1,13 +1,12 @@
-<figure>
-  <% slide.media_assets.each_with_index do |asset, index| %>
-    <div class="asset" style="background-image: url(<%= asset['url'] %>)">
+<article>
+  <figure>
+    <% slide.media_assets.each_with_index do |asset, index| %>
+      <img src="<%= asset['url'] %>" alt="<%= asset['filename'] %>" />
       <%= slide.media_captions[index] %>
-    </div>
-  <% end %>
-</figure>
-
-</figure>
-<figcaption>
-  <h1><%= slide["Headline"] %></h1>
-  <%= markdown slide["Body"] %>
-</figcaption>
+    <% end %>
+  </figure>
+  <figcaption>
+    <h1><%= slide["Headline"] %></h1>
+    <%= markdown slide["Body"] %>
+  </figcaption>
+</article>
