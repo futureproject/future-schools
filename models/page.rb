@@ -4,8 +4,12 @@ class Page < Airmodel::Model
   def self.find_by_slug(slug)
     slug = slug.downcase
     page = self.find_by("slug" => slug)
-    page["slides"] = page.ordered_slides
-    page
+    if page
+      page["slides"] = page.ordered_slides
+      page
+    else
+      nil
+    end
   end
 
   # search for this page in memcached, or

@@ -1,7 +1,7 @@
 <figure>
   <% slide.media_assets.each_with_index do |asset, index| %>
     <div class="asset" style="background-image: url(<%= asset['url'] %>)">
-      <%= slide.media_captions.try(:fetch, index) %>
+      <%= slide.media_captions[index] %>
     </div>
   <% end %>
 </figure>

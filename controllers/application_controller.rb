@@ -30,7 +30,7 @@ class ApplicationController < App
 
   # shows the cached version of any page
   get "/:slug" do
-    @page = Page.find_by_slug_cached params[:slug]
+    @page = Page.find_by_slug_cached(params[:slug]) || halt(404, erb(:"pages/404"))
     erb :"pages/show"
   end
 
