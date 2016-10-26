@@ -1,0 +1,4 @@
+<% columns = slide['Body'].split('---') %>
+<% columns.each do |col| %>
+  <%= markdown(col) %>
+<% end %>
