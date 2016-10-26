@@ -1,4 +1,11 @@
-<% columns = slide['Body'].split('---') %>
-<% columns.each do |col| %>
-  <%= markdown(col) %>
-<% end %>
+<header>
+  <h2><%= slide['Headline'] %></h2>
+</header>
+<% columns = slide['Body'].split('---').select{|x| !x.blank? } %>
+<div class="columns">
+  <% columns.each do |col| %>
+    <div class="column">
+      <%= markdown(col) %>
+    </div>
+  <% end %>
+</div>

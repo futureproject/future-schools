@@ -1,5 +1,11 @@
 <figure>
-  I AM SOME SORT OF GRAPHIC
+  <% slide.media_assets.each_with_index do |asset, index| %>
+    <div class="asset" style="background-image: url(<%= asset['url'] %>)">
+      <%= slide.media_captions.try(:fetch, index) %>
+    </div>
+  <% end %>
+</figure>
+
 </figure>
 <figcaption>
   <h1><%= slide["Headline"] %></h1>

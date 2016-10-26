@@ -28,22 +28,76 @@
   }
 }
 
-@media(min-width: 1024px) {
+.table {
+  .slide-inner {
+    max-width: 60rem;
+  }
+}
+
+.column {
+  padding: 2rem 1rem;
+  ul {
+    padding: 1rem 0 0 1rem;
+  }
+}
+
+figure {
+  width: 100%;
+  overflow: hidden;
+  margin-bottom: 1rem;
+  .asset {
+    width: 100%;
+    height: 0;
+    padding-bottom: 100%;
+    display: none;
+    background-size: contain;
+    background-position: center center;
+    background-repeat: no-repeat;
+  }
+  .asset:first-child {
+    display: block;
+  }
+}
+@media (orientation: landscape), (min-width: 768px) {
   .slide {
     .slide-inner {
       @include clearfix;
     }
     figure {
-      float: right;
-      width: 40%;
-      background: blue;
-      color: white;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      right: 0;
+      width: auto;
       height: 100%;
+      max-height: 24rem;
+      @include transform(translateY(-50%));
+      .asset {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        @include transform(translate(-50%, -50%));
+        padding-bottom: 50%;
+        background-position: center left;
+      }
     }
     figcaption {
-      float: left;
       width: 50%;
-      margin-right: 10%;
+    }
+  }
+  .table {
+    em {
+      display: inline-block;
+      height: 2.4rem;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+  }
+  .columns {
+    display: table;
+    table-layout: fixed;
+    .column {
+      display: table-cell;
     }
   }
 }

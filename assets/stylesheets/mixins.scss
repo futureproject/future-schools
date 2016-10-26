@@ -1,0 +1,21 @@
+$blue: rgba(0,189,236,.9);
+$teal: rgba(70,218,200,.9);
+$green: rgba(172,232,72,.9);
+$orange: rgba(250,180,7,.9);
+$dark-blue: rgb(53,63,79);
+
+$base-accent-color: $blue;
+$footer-bg: rgb(24,40,58);
+
+@mixin flagged {
+  background: $dark-blue;
+  font-weight: bold;
+  font-family: 'rift', 'arial narrow', sans-serif;
+  color: white;
+  text-transform: uppercase;
+  line-height: 1;
+  display: inline-block;
+  padding: .5rem;
+  font-size: 1.3333rem;
+}
+

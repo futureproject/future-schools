@@ -1,11 +1,3 @@
-$blue: rgba(0,189,236,.9);
-$teal: rgba(70,218,200,.9);
-$green: rgba(172,232,72,.9);
-$orange: rgba(250,180,7,.9);
-
-$base-accent-color: $blue;
-$footer-bg: rgb(24,40,58);
-
 body {
   font-family: 'proxima', sans-serif;
   line-height: 1.2;
@@ -22,7 +14,8 @@ em {
 }
 
 .slide {
-  @include linear-gradient(white, rgb(241,242,243));
+  background: #FCFAFB;
+  //@include linear-gradient(white, rgb(241,242,243));
   header {
     h1, h2, h3, h4, h5, h6 {
       margin: 0;
@@ -83,7 +76,28 @@ em {
 }
 
 .slide.table {
-  text-align: left;
+  header {
+    text-align: center;
+  }
+  em {
+    font-style: normal;
+    opacity: .5;
+  }
+}
+
+.columns {
+  color: $dark-blue;
+  font-size: .857rem;
+  h2 {
+    @include flagged;
+  }
+  ul {
+    border-top: 1px solid #cfcfcf;
+    text-align: left;
+  }
+  li {
+    margin-bottom: 1rem;
+  }
 }
 
 body > footer {
