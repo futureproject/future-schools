@@ -12,4 +12,10 @@ module AppHelper
     @page["Description"] || ""
   end
 
+  def page_classes
+    classes = "page"
+    classes += " page-#{@page['Name'].parameterize}" if @page
+    classes
+  end
+
 end

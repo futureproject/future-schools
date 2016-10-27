@@ -3,6 +3,42 @@
 }
 
 body > footer {
-  padding: 2rem;
+  article, nav {
+    padding: 1rem;
+  }
+  article {
+    white-space: nowrap;
+    vertical-align: middle;
+    overflow: hidden;
+    line-height: 4rem;
+    span {
+      position: relative;
+      display: inline-block;
+      height: 1rem;
+      width: 4rem;
+      overflow: visible;
+    }
+    img {
+      position: absolute;
+      top: 50%;
+      left: 0;
+      margin-top: -2rem;
+      display: block;
+      height: 4rem;
+      width: 4rem;
+    }
+  }
+  nav > * {
+    display: inline-block;
+    padding: 4px .5rem;
+    &:not(:first-child) {
+      border-left: 1px solid rgba(255,255,255,.25);
+    }
+  }
 }
 
+.page-about {
+  footer article {
+    display: none;
+  }
+}

@@ -11,7 +11,7 @@
     <link rel="shortcut icon" href="<%= image_path('favicon.ico') %>" type="image/x-icon" / >
     <%= stylesheet_tag "screen" %>
   </head>
-  <body>
+  <body class="<%= page_classes %>">
 
     <header>
       <!--[if lte IE 9]>
@@ -24,8 +24,20 @@
     </main>
 
     <footer>
+      <article>
+        <p>
+          <a href="/about">
+            Powered by
+            <span><img src="/images/logo.png" alt="The Future Project" /></span>
+            Learn More
+          </a>
+        </p>
+      </article>
       <nav>
         <a href="http://www.thefutureproject.org/">The Future Project</a>
+        <a class="social-fb" href="https://www.facebook.com/tfpinspire">Facebook</a>
+        <a class="social-tw" href="https://www.twitter.com/dreamdirectors">Twitter</a>
+        <a class="social-insta" href="http://www.instagram.com/dreamdirectors">Instagram</a>
         <% if @editing %>
           <form method="POST" action="/publish">
             <input type="submit" value="Publish" />
