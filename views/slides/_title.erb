@@ -1,11 +1,13 @@
 <article>
   <header>
     <h1>
-      <% slide['Headline'].split(' ').each do |word| %>
-        <div class="word">
-          <span><%= word %></span>
+      <% sections = slide["Headline"].split('___') %>
+      <% options = slide["Flags"].split(',').shuffle %>
+      <%= sections.first %>
+        <div class="fill-in-the-blank">
+          <span data-options="<%= options.join(',') %>"><%= options.first %></span>
         </div>
-      <% end %>
+      <%= sections.last %>
     </h1>
   </header>
   <%= markdown slide['Body'] %>
