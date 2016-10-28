@@ -1,3 +1,8 @@
+<% slide.media_assets.each do |asset| %>
+  <figure>
+    <img src="<%= asset['url'] %>" alt="<%= slide['Headline'] %>" />
+  </figure>
+<% end %>
 <article>
   <header>
     <h1>
@@ -12,4 +17,3 @@
   </header>
   <%= markdown slide['Body'] %>
 </article>
-<img src="/images/tracy.png">

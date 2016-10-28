@@ -16,11 +16,14 @@
 }
 
 .title-slide {
-  height: 100vh;
-  article {
-    @include transform(translateY(-50%));
+  figure {
     position: relative;
-    top: 50%;
+    left: 0;
+    top: 0;
+    img {
+      width: 100%;
+      height: auto;
+    }
   }
 }
 
@@ -53,6 +56,30 @@ figure {
   }
 }
 @media (orientation: landscape), (min-width: 768px) {
+  .title-slide {
+    height: 100vh;
+    article {
+      @include transform(translateY(-50%));
+      position: relative;
+      top: 50%;
+      z-index: 2;
+    }
+    figure {
+      position: absolute;
+      z-index: 1;
+      left: 50%;
+      width: 100%;
+      max-width: 1400px;
+      bottom: 0;
+      @include transform(translateX(-50%));
+      img {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        max-width: 30rem;
+      }
+    }
+  }
   .graphic-slide {
     @include clearfix;
     figure {

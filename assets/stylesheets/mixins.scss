@@ -4,18 +4,39 @@ $green: rgba(172,232,72,.9);
 $orange: rgba(250,180,7,.9);
 $dark-blue: rgb(53,63,79);
 
+$blue: #00c0ef;
+$teal: #00d4bd;
+$green: #97e242;
+$orange: #fab406;
+$red: #f63868;
+$purple: #d43da3;
+$indigo: #3c82f7;
+
 $base-accent-color: $blue;
+$base-background-color: #fcfafb;
 $footer-bg: rgb(24,40,58);
 
-@mixin flagged {
-  background: $dark-blue;
+@mixin headline {
   font-weight: bold;
   font-family: 'rift', 'arial narrow', sans-serif;
-  color: white;
   text-transform: uppercase;
   line-height: 1;
+}
+@mixin flagged {
+  @include headline;
+  background: $dark-blue;
+  color: white;
   display: inline-block;
   padding: .5rem;
   font-size: 1.3333rem;
+}
+
+@include keyframes(pulse) {
+  from {
+    box-shadow: 0 0 0 0rem rgba(77,218,245,.5);
+  }
+  to {
+    box-shadow: 0 0 0 1rem rgba(77,218,245,0);
+  }
 }
 
