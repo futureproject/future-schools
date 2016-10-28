@@ -39,7 +39,9 @@ em {
   li {
     margin: auto .2rem;
   }
-  button {
+  button, .button {
+    display: inline-block;
+    text-decoration: none;
     @include appearance(none);
     background: $base-accent-color;
     color: white;
@@ -95,7 +97,6 @@ em {
 }
 
 .text-slide {
-  background-color: white;
   overflow: hidden;
   background-size: 100% auto;
   background-position: center bottom;
