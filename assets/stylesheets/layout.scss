@@ -44,10 +44,14 @@ body > footer {
 }
 
 .page-home {
-  .title-slide {
-    background-image: url(/images/tracy.png);
-    background-position: left bottom;
-    background-repeat: no-repeat;
-    background-size: auto 100%;
+  .title-slide article {
+    position: relative;
+    z-index: 2;
+  }
+  .title-slide > img {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: 1;
   }
 }

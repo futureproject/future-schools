@@ -45,6 +45,8 @@ em {
   header {
   }
   h1 { line-height: 1.2; }
+  h1 {
+  }
   .fill-in-the-blank {
     span {
       color: white;
@@ -78,12 +80,21 @@ em {
     width: calc(100% - 2rem);
     max-width: 30rem;
     @include transform(translate(-50%, -50%));
+    z-index: 2;
     mix-blend-mode: multiply;
-    border: 6px solid $base-accent-color;
-    * {
-      position: relative;
-      position: relative;
-      z-index: 2;
+    &:after {
+      content: '';
+      display: block;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: calc(100vw - 4rem);
+      height: calc(100vh - 4rem);
+      max-width: 1400px;
+      z-index: 1;
+      border: 6px solid $base-accent-color;
+      @include transform(translate(-50%,-50%));
+      mix-blend-mode: multiply;
     }
   }
   p {
@@ -152,26 +163,6 @@ body > footer {
 @media(min-width: 1024px) {
   html, body {
     font-size: 24px;
-  }
-  .text-slide {
-    article {
-      border: none;
-      z-index: 2;
-    }
-    &:after {
-      content: '';
-      display: block;
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      width: calc(100vw - 4rem);
-      height: calc(100vh - 4rem);
-      max-width: 1400px;
-      z-index: 1;
-      border: 6px solid $base-accent-color;
-      @include transform(translate(-50%,-50%));
-      mix-blend-mode: multiply;
-    }
   }
 }
 
