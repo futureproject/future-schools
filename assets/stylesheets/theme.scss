@@ -54,11 +54,12 @@ em {
     cursor: pointer;
     box-sizing: content-box;
     @include transition(background .3s);
+    @include animation(pulse 1.3s ease infinite);
     &:hover {
-      @include animation(pulse 1.3s ease infinite);
+      border-color: lighten($base-accent-color, 20%);;
     }
     &:active {
-      background: $teal;
+      background: $indigo;
     }
   }
 }
