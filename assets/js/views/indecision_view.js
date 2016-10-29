@@ -1,19 +1,33 @@
+// USAGE:
+// var slide = document.querySelector('.slide')
+//new tfp.IndecisionView({
+  //el: slide,
+  //wordChoices: slide.getAttribute('data-choices'),
+  //targetEl: slide.querySelector('.indecision')
+//})
+
 tfp.IndecisionView = Backbone.View.extend({
   initialize: function(args) {
     var self = this;
     _.each(args, function(value, key, list) {
       self[key] = value;
     })
-    self.currentWordIndex = 0;
-    self.wordChoices = self.wordChoices.split(',');
-    // set interval
-    self.timer = window.setInterval(function(){
+    this.interval = this.interval || 200;
+    this.currentWordIndex = 0;
+    this.wordChoices = this.setWords(this.wordChoices);
+    this.timer = window.setInterval(function(){
       self.changeWord.call(self)
-    }, self.interval);
+    }, this.interval);
+  },
+  setWords: function(words) {
+    var wordBank = words.split(",");
+    var firstWord = wordBank.shift();
+    wordBank.push(firstWord);
+    return wordBank;
   },
   changeWord: function(){
-    newSlide = this.currentWordIndex % this.wordChoices.length;
-    console.log(this.wordChoices[newSlide]);
+    //this.targetEl.innerHTML = this.wordChoces[newSlide];
+    this.targetEl.innerHTML = "<span>" + this.wordChoices[this.currentWordIndex % this.wordChoices.length] + "</span>";
     this.currentWordIndex += 1;
   }
 })
