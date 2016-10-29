@@ -3,6 +3,7 @@ body {
   line-height: 1.2;
   font-size: 14px;
   text-align: center;
+  background-color: $base-background-color;
 }
 
 h1, h2, h3, h4, h5, h6, strong {
@@ -53,7 +54,7 @@ em {
     border-radius: 100%;
     cursor: pointer;
     box-sizing: content-box;
-    @include transition(background .3s);
+    @include transition(all .3s);
     @include animation(pulse 1.3s ease infinite);
     &:hover {
       border-color: lighten($base-accent-color, 20%);;
@@ -69,7 +70,7 @@ em {
     mix-blend-mode: multiply;
   }
   h1 { line-height: 1.2; }
-  .fill-in-the-blank {
+  .indecision {
     display: block;
     span {
       color: white;

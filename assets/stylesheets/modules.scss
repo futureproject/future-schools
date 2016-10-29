@@ -91,6 +91,7 @@ figure {
   }
   .graphic-slide {
     @include clearfix;
+    margin-top: 2rem;
     figure {
       position: absolute;
       top: 1rem;
