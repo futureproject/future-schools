@@ -28,12 +28,21 @@
 }
 
 .table-slide {
+  header {
+    margin-top: 2rem;
+  }
   article {
     max-width: 60rem;
   }
 }
 
 .column {
+  img {
+    display: block;
+    margin: 0 auto;
+    width: 5rem;
+    height: 5rem;
+  }
   padding: 2rem 1rem;
   ul {
     padding: 1rem 0 0 1rem;
