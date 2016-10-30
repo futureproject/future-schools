@@ -59,6 +59,26 @@ figure {
     display: block;
   }
 }
+
+.featherlight {
+  .featherlight-content {
+    margin: 0;
+    max-width: 100%;
+    max-height: 100%;
+    position: absolute;
+    top: 2rem;
+    left: 2rem;
+    width: calc(100% - 4rem);
+    height: calc(100% - 4rem);
+  }
+  iframe {
+    width: calc(100vw - 4rem);
+    height: calc(100vh - 4rem);
+    max-width: 100%;
+    max-height: 100%;
+  }
+}
+
 @media (min-width: 660px) {
   .slide {
     padding: 4rem;

@@ -13,10 +13,18 @@ tfp.SlidesView = Backbone.View.extend({
   },
   anchorHandler: function(event) {
     var t = event.currentTarget;
+    // intercept same-page links and activate smooth-scrolling
     if (!!t.hash) {
       event.preventDefault()
       var elem = document.querySelector(t.hash)
       Backbone.trigger('slides:goTo', elem);
+    }
+    // open forms and embeds in a lightbox
+    else if (t.href.match(/airtable|vimeo|youtube/i)) {
+      event.preventDefault();
+      $.featherlight({
+        iframe: t.href
+      })
     }
     return true;
   }
