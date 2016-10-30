@@ -18,11 +18,6 @@ tfp.IndecisionView = Backbone.View.extend({
     this.timer = this.startTimer();
     this.listenTo(Backbone, 'word:change', this.changeWord);
   },
-  events: {
-    'mouseup header': 'dismiss',
-    'click header': 'dismiss',
-    'touchend header': 'dismiss'
-  },
   colors: ["#00c0ef", "#00d4bd", "#97e242", "#fab406", "#f63868", "#d43da3", "#3c82f7"],
   startTimer: function(){
     return window.setInterval(function(){
@@ -39,7 +34,8 @@ tfp.IndecisionView = Backbone.View.extend({
     var self = this;
     var newIndex = this.currentWordIndex % this.wordChoices.length;
     var newColor = this.colors[this.currentWordIndex % this.colors.length];
-    this.targetEl.innerHTML = "<span style='background-color: " + newColor + ";'>" + this.wordChoices[newIndex] + "</span>";
+    this.targetEl.setAttribute('style', 'background-color: ' + newColor + ';');
+    this.targetEl.innerHTML = this.wordChoices[newIndex];
     if (newIndex == 0 && this.currentWordIndex > 0 ){
       var last = this.wordChoices.shift();
       this.wordChoices.push(last);

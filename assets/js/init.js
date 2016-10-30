@@ -8,7 +8,11 @@ $(function(){
     new tfp.IndecisionView({
       el: slide,
       wordChoices: slide.getAttribute('data-choices'),
-      targetEl: slide.querySelector('.indecision')
+      targetEl: slide.querySelector('.indecision span'),
+      events: {
+        'click header': 'dismiss',
+        'mousedown .indecision-choice': 'dismiss',
+      }
     })
   })
   // activate slideshows
