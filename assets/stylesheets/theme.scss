@@ -68,8 +68,12 @@ em {
 .title-slide {
   article {
     mix-blend-mode: multiply;
+    @include user-select(none);
   }
-  h1 { line-height: 1.2; }
+  h1 {
+    line-height: 1.2;
+    cursor: pointer;
+  }
   .indecision {
     display: block;
     span {
@@ -147,10 +151,16 @@ em {
       pointer-events: none;
     }
   }
-  p {
-    //display: inline;
-    //background: rgba(255,255,255,.8);
-    //box-shadow: .25rem 0 0 rgba(255,255,255,.8), -.25rem 0 0 rgba(255,255,255,.8);
+  a {
+    display: inline-block;
+    border: .2rem solid $base-accent-color;
+    text-decoration: none;
+    color: $base-accent-color;
+    padding: .25rem;
+    &:hover {
+      background: $base-accent-color;
+      color: white;
+    }
   }
 }
 

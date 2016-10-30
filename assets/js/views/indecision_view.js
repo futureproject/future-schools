@@ -18,6 +18,11 @@ tfp.IndecisionView = Backbone.View.extend({
     this.timer = this.startTimer();
     this.listenTo(Backbone, 'word:change', this.changeWord);
   },
+  events: {
+    'mouseup header': 'dismiss',
+    'click header': 'dismiss',
+    'touchend header': 'dismiss'
+  },
   colors: ["#00c0ef", "#00d4bd", "#97e242", "#fab406", "#f63868", "#d43da3", "#3c82f7"],
   startTimer: function(){
     return window.setInterval(function(){
@@ -44,5 +49,9 @@ tfp.IndecisionView = Backbone.View.extend({
       }, 2000);
     }
     this.currentWordIndex += 1;
-  }
+  },
+  dismiss: _.debounce(function(event) {
+    var $target = this.$el.closest('.slide').next();
+    Backbone.trigger('slides:goTo', $target);
+  }, 500, true)
 })
