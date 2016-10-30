@@ -39,4 +39,20 @@ $footer-bg: rgb(24,40,58);
     box-shadow: 0 0 0 1rem rgba(77,218,245,0);
   }
 }
-
+@mixin block-button {
+  display: inline-block;
+  border: .2rem solid $base-accent-color;
+  text-decoration: none;
+  color: $base-accent-color;
+  padding: .25rem .5rem;
+  text-transform: uppercase;
+  font-weight: bold;
+  background-color: white;
+  font-size: .75rem;
+  letter-spacing: .1rem;
+  line-height: 1;
+  &:hover {
+    background: $base-accent-color;
+    color: white;
+  }
+}

@@ -26,6 +26,9 @@ tfp.SlidesView = Backbone.View.extend({
         iframe: t.href
       })
     }
+    if (t.id == 'floating-signup-button') {
+      $(t).fadeOut(function(){ $(this).remove() })
+    }
     return true;
   }
 })

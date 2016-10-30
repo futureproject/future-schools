@@ -152,15 +152,7 @@ em {
     }
   }
   a {
-    display: inline-block;
-    border: .2rem solid $base-accent-color;
-    text-decoration: none;
-    color: $base-accent-color;
-    padding: .25rem;
-    &:hover {
-      background: $base-accent-color;
-      color: white;
-    }
+    @include block-button;
   }
 }
 
@@ -190,6 +182,13 @@ em {
   }
 }
 
+#floating-signup-button {
+  position: fixed;
+  top: 1rem;
+  right: 1rem;
+  @include block-button;
+  z-index: 10;
+}
 body > footer {
   background-color: $footer-bg;
   color: rgba(255,255,255,.8);
