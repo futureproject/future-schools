@@ -7,8 +7,7 @@ $(function(){
   _.each(document.querySelectorAll('.title-slide article'), function(slide){
     new tfp.IndecisionView({
       el: slide,
-      wordChoices: slide.getAttribute('data-choices'),
-      targetEl: slide.querySelector('.indecision span'),
+      targetEl: slide.querySelector('.indecision'),
       events: {
         'click header': 'dismiss',
         'mousedown .indecision-choice': 'dismiss',

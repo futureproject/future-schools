@@ -5,12 +5,14 @@
 <% end %>
 <% frame = slide["Headline"].split('___') %>
 <% choices = slide["Flags"].split(',').shuffle %>
-<article data-choices="<%= choices.join(',') %>">
+<article>
   <header>
     <h1>
       <%= frame.first %>
         <span class="indecision">
-          <span class="indecision-choice"><%= choices.first %></span>
+          <% choices.each do |choice| %>
+            <span class="indecision-choice"><%= choice %></span>
+          <% end %>
         </span>
       <%= frame.last %>
     </h1>

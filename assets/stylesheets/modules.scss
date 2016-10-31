@@ -19,6 +19,10 @@
 }
 
 .title-slide {
+  header {
+    @include transform(translate3d(0,0,0));
+    -webkit-font-smoothing: antialiased;
+  }
   figure {
     position: relative;
     left: 0;
@@ -26,6 +30,13 @@
     img {
       width: 100%;
       height: auto;
+    }
+  }
+  .indecision .indecision-choice {
+    display: none;
+    @include animation(fadeIn .5s);
+    &.is-active {
+      display: inline-block;
     }
   }
 }

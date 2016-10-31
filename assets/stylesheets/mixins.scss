@@ -32,14 +32,6 @@ $footer-bg: rgb(24,40,58);
   font-size: 1.3333rem;
 }
 
-@include keyframes(pulse) {
-  from {
-    box-shadow: 0 0 0 0rem rgba(77,218,245,.5);
-  }
-  to {
-    box-shadow: 0 0 0 1rem rgba(77,218,245,0);
-  }
-}
 @mixin block-button {
   display: inline-block;
   text-decoration: none;
@@ -52,5 +44,23 @@ $footer-bg: rgb(24,40,58);
   &:hover {
     background: $base-accent-color;
     color: white;
+  }
+}
+
+@include keyframes(pulse) {
+  from {
+    box-shadow: 0 0 0 0rem rgba(77,218,245,.5);
+  }
+  to {
+    box-shadow: 0 0 0 1rem rgba(77,218,245,0);
+  }
+}
+
+@include keyframes(fadeIn) {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
   }
 }
