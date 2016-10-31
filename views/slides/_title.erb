@@ -10,8 +10,10 @@
     <h1>
       <%= frame.first %>
         <span class="indecision">
-          <% choices.each do |choice| %>
-            <span class="indecision-choice"><%= choice %></span>
+          <% choices.each_with_index do |choice, index| %>
+            <span class="indecision-choice <%= 'is-active' if index == 0 %>">
+              <%= choice %>
+            </span>
           <% end %>
         </span>
       <%= frame.last %>
