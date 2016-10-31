@@ -9,8 +9,7 @@ $(function(){
       el: slide,
       targetEl: slide.querySelector('.indecision'),
       events: {
-        'click header': 'dismiss',
-        'mousedown .indecision-choice': 'dismiss',
+        'click header': 'dismiss'
       }
     })
   })
