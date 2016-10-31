@@ -42,12 +42,9 @@ $footer-bg: rgb(24,40,58);
 }
 @mixin block-button {
   display: inline-block;
-  border: .2rem solid $base-accent-color;
   text-decoration: none;
   color: $base-accent-color;
-  padding: .25rem .5rem;
-  text-transform: uppercase;
-  font-weight: bold;
+  padding: .5rem;
   background-color: white;
   font-size: .75rem;
   letter-spacing: .1rem;
