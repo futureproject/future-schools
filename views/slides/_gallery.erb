@@ -1,0 +1,13 @@
+<header>
+  <em><%= slide["Flags"] %></em>
+  <h1><%= slide["Headline"] %></h1>
+</header>
+<p><%= slide["Body"] %></p>
+<aside>
+  <% slide.media_assets.each_with_index do |asset, index| %>
+  <figure>
+    <img src="<%= asset['url'] %>" alt="<%= asset['filename'] %>" />
+    <figcaption><%= slide.media_captions[index] %></figcaption>
+  </figure>
+  <% end %>
+</aside>

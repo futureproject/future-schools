@@ -21,6 +21,7 @@ $footer-bg: rgb(24,40,58);
   font-family: 'rift', 'arial narrow', sans-serif;
   text-transform: uppercase;
   line-height: 1;
+  font-style: normal;
 }
 @mixin flagged {
   @include headline;

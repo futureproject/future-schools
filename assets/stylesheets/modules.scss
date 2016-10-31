@@ -13,6 +13,9 @@
     margin: 0 auto;
     @include clearfix;
   }
+  h2, h3, p, ul, ol {
+    margin: 1rem auto;
+  }
 }
 
 .title-slide {
@@ -57,6 +60,28 @@ figure {
     width: 100%;
     height: auto;
     display: block;
+  }
+}
+
+.gallery-slide {
+  max-width: 60rem;
+  margin-left: auto;
+  margin-right: auto;
+  @include clearfix;
+  figure {
+    max-width: 24rem;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    img {
+      display: block;
+      max-width: 12rem;
+      width: 100%;
+      height: auto;
+      padding: 1rem;
+      margin: 0 auto 1rem;
+      border: 6px solid $base-accent-color;
+    }
   }
 }
 
@@ -110,6 +135,29 @@ figure {
         left: 0;
         max-width: 30rem;
       }
+    }
+  }
+  .gallery-slide {
+    header, p {
+      max-width: 60%;
+      margin-left: 0;
+      margin-right: 0;
+    }
+    p {
+      clear: left;
+    }
+    aside {
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 40%;
+      padding: 6.66667rem 2rem 0;
+    }
+    figure, figure.is-hidden {
+      display: none;
+    }
+    figure:first-child, figure.is-active {
+      display: block;
     }
   }
   .graphic-slide {

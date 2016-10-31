@@ -31,9 +31,6 @@ em {
     text-transform: uppercase;
     line-height: 1;
   }
-  h2, h3, p, ul, ol {
-    margin: 1rem auto;
-  }
   ul {
     list-style-type: disc;
   }
@@ -115,6 +112,14 @@ em {
     h1 {
       color: $orange;
     }
+  }
+}
+
+.gallery-slide {
+  text-align: left;
+  em { @include flagged; }
+  figcaption {
+    font-size: .75rem;
   }
 }
 
@@ -235,4 +240,17 @@ body > footer {
   .text-slide {
     background-size: 1400px auto;
   }
+}
+
+#model {
+  header { color: $indigo; }
+  img { border-color: $indigo; }
+}
+#impact {
+  header { color: $purple; }
+  img { border-color: $purple; }
+}
+#research {
+  header { color: $red; }
+  img { border-color: $red; }
 }
