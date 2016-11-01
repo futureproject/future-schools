@@ -18,6 +18,14 @@
   }
 }
 
+.slide:nth-child(2) {
+  @include animation-name(scrollClue);
+  @include animation-iteration-count(2);
+  @include animation-direction(alternate);
+  @include animation-duration(.667s);
+  @include animation-delay(1s);
+}
+
 .title-slide {
   header {
     @include transform(translate3d(0,0,0));
@@ -226,13 +234,6 @@ figure {
     .column {
       display: table-cell;
     }
-  }
-  .slide:nth-child(2) {
-    @include animation-name(scrollClue);
-    @include animation-iteration-count(2);
-    @include animation-direction(alternate);
-    @include animation-duration(.667s);
-    @include animation-delay(1s);
   }
 }
 
