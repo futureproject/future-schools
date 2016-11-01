@@ -63,3 +63,17 @@ $footer-bg: rgb(24,40,58);
     opacity: 1;
   }
 }
+
+@include keyframes(scrollClue) {
+  from {
+    @include transform(translate3d(0,0,0));
+    z-index: 100;
+    opacity: 0;
+  }
+  to {
+    @include transform(translate3d(0,-20vh,0));
+    z-index: 100;
+    box-shadow: 0 0 6px rgba(0,0,0,.15);
+    opacity: 1;
+  }
+}
