@@ -6,7 +6,9 @@
 <aside>
   <% slide.media_assets.each_with_index do |asset, index| %>
   <figure>
-    <img src="<%= asset['url'] %>" alt="<%= asset['filename'] %>" />
+    <div class="gallery-item">
+      <img src="<%= asset['url'] %>" alt="<%= asset['filename'] %>" />
+    </div>
     <figcaption><%= slide.media_captions[index] %></figcaption>
   </figure>
   <% end %>

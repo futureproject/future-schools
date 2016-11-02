@@ -91,19 +91,41 @@ figure {
     max-width: 24rem;
     margin-left: auto;
     margin-right: auto;
+    margin-bottom: 2rem;
     text-align: center;
+    .gallery-item {
+      position: relative;
+      width: 12rem;
+      height: 12rem;
+      border: 6px solid $base-accent-color;
+      margin: 0 auto 1rem;
+      border-radius: 100%;
+      padding: 2rem;
+      overflow: hidden;
+    }
     img {
       display: block;
-      max-width: 12rem;
-      width: 100%;
+      width: 80%;
       height: auto;
-      padding: 1rem;
-      margin: 0 auto 1rem;
-      border: 6px solid $base-accent-color;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      @include transform(translate(-50%,-50%));
     }
   }
 }
 
+.gallery-active {
+  figure {
+    @include transition(opacity .3s);
+    opacity: 0;
+    -webkit-font-smoothing: antialiased;
+    cursor: pointer;
+  }
+  figure.active {
+    opacity: 1;
+  }
+}
 .featherlight {
   .featherlight-content {
     margin: 0;
@@ -170,13 +192,16 @@ figure {
       top: 0;
       right: 0;
       width: 40%;
+      height: 100%;
+    }
+    figure {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
       padding: 6.66667rem 2rem 0;
-    }
-    figure, figure.is-hidden {
-      display: none;
-    }
-    figure:first-child, figure.is-active {
-      display: block;
+      background: $base-background-color;
     }
   }
   .graphic-slide {

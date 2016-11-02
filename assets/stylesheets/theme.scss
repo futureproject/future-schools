@@ -244,13 +244,13 @@ body > footer {
 
 #model {
   header { color: $indigo; }
-  img { border-color: $indigo; }
+  .gallery-item { border-color: $indigo; }
 }
 #impact {
   header { color: $purple; }
-  img { border-color: $purple; }
+  .gallery-item { border-color: $purple; }
 }
 #research {
   header { color: $red; }
-  img { border-color: $red; }
+  .gallery-item { border-color: $red; }
 }

@@ -14,4 +14,9 @@ $(function(){
     })
   })
   // activate slideshows
+  _.each(document.querySelectorAll('.gallery-slide'), function(slide){
+    new tfp.GalleryView({
+      el: slide
+    })
+  })
 })
