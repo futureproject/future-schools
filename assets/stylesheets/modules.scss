@@ -117,15 +117,17 @@ figure {
 
 .gallery-active {
   figure {
-    @include transition(opacity .3s);
     opacity: 0;
     -webkit-font-smoothing: antialiased;
     cursor: pointer;
+    @include transition(opacity .3s linear);
+    @include user-select(none);
   }
   figure.active {
     opacity: 1;
   }
 }
+
 .featherlight {
   .featherlight-content {
     margin: 0;
