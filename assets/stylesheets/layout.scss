@@ -36,10 +36,24 @@ body > footer {
     }
   }
 }
+#floating-signup-button {
+  display: none;
+}
+.page-home {
+  #floating-signup-button {
+    display: block;
+  }
+}
 
 .page-about {
-  footer article, #floating-signup-button {
+  footer article {
     display: none;
+  }
+}
+
+main > form {
+  p {
+    margin: 1rem 0;
   }
 }
 

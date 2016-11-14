@@ -4,3 +4,6 @@
 :slides:
   :bases: appFCtjOFWoba8ipk
   :table_name: Slides
+:signups:
+  :bases: appFCtjOFWoba8ipk
+  :table_name: Signups

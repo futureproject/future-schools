@@ -62,6 +62,55 @@ em {
   }
 }
 
+form {
+  background: white;
+  background: rgba(255,255,255,.9);
+  text-align: left;
+  padding: 1rem;
+  border: 6px solid $base-accent-color;
+  mix-blend-mode: normal;
+  max-width: 70ch;
+  margin: 0 auto;
+  label {
+    @include user-select(none);
+    margin-right: 1ch;
+    white-space: nowrap;
+    line-height: 1.5;
+  }
+  input[type=text] {
+    @include appearance(none);
+    box-shadow: none;
+    border-radius: 0;
+    border: none;
+    border-bottom: 2px solid $base-accent-color;
+    font-size: 1rem;
+  }
+  select {
+    display: block;
+    margin-bottom: 1.2rem;
+  }
+}
+input[type=submit] {
+    display: inline-block;
+    text-decoration: none;
+    @include appearance(none);
+    background: $base-accent-color;
+    color: white;
+    border: none;
+    font-size: 1rem;
+    @include headline;
+    border: .25rem solid #A8F2FD;
+    padding: .5rem .6rem;
+    @include transition(all .3s);
+    @include animation(pulse 1.3s ease infinite);
+    &:hover {
+      border-color: lighten($base-accent-color, 20%);;
+    }
+    &:active {
+      background: $indigo;
+    }
+}
+
 .title-slide {
   article {
     mix-blend-mode: multiply;
@@ -172,6 +221,10 @@ em {
   }
 }
 
+.signup-form-slide {
+  overflow: visible;
+}
+
 .columns {
   color: $dark-blue;
   font-size: .75rem;
@@ -253,4 +306,8 @@ body > footer {
 #research {
   header { color: $red; }
   .gallery-item { border-color: $red; }
+}
+
+.errors {
+  color: $red;
 }

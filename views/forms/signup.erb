@@ -1,0 +1,45 @@
+<form action="/forms/signup" method="POST">
+  <% if @signup && @signup.errors %>
+    <p class="errors"><%= @signup.errors %></p>
+  <% end %>
+  <p>
+    <label>Your Name:*</label>
+    <input name="record[Name]" type="text" required />
+  </p>
+  <p>
+    <label>Your Email:*</label>
+    <input name="record[Email]" type="text" required />
+  </p>
+  <p>
+    <label>Your Role:</label>
+    <input name="record[Role]" type="text" required placeholder="Principal, Teacher, etc" />
+  </p>
+  <p>
+    <label>School Name:</label>
+    <input name="record[School Name]" type="text" required />
+  </p>
+  <p>
+    <label>City:</label>
+    <input name="record[City]" type="text" required />
+  </p>
+  <p>
+    <label>Which services are you interested in?</label>
+  </p>
+  <p>
+    <label>
+      <input type="checkbox" name="record[Services][]" value="Dream Digital" />
+      Dream Digital
+    </label>
+    <label>
+      <input type="checkbox" name="record[Services][]" value="Dream Training" />
+      Dream Training
+    </label>
+    <label>
+      <input type="checkbox" name="record[Services][]" value="Dream Director" />
+      Dream Director
+    </label>
+  </p>
+  <p>
+    <input type="submit" value="Let's do this" />
+  </p>
+</form>

@@ -21,23 +21,24 @@ tfp.SlidesView = Backbone.View.extend({
       Backbone.trigger('slides:goTo', elem);
     }
     // open forms and embeds in a lightbox
-    else if (t.href.match(/airtable|vimeo|youtube|forms/i)) {
+    else if (t.href.match(/airtable|vimeo|youtube/i)) {
       event.preventDefault();
       $.featherlight({
         iframe: t.href
       })
-      if (t.href.match(/airtable|forms/i)) {
-        Backbone.trigger('signup:clicked');
-      }
     }
-    if (t.id == 'floating-signup-button') {
-      $(t).fadeOut(function(){ $(this).remove() })
+    if (t.href.match(/forms|signup/i)) {
+      event.preventDefault();
+      Backbone.trigger('signup:clicked');
     }
     return true;
   },
   signupHandler: function(event) {
+    var form = new tfp.SignupFormView({
+      el: document.querySelector("#signup")
+    });
     $("#floating-signup-button").fadeOut(function(){
       $(this).remove();
-    })
+    });
   }
 })

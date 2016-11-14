@@ -7,13 +7,6 @@ feature "Visiting pages" do
     expect(page).not_to have_selector("body > footer button")
   end
 
-  scenario "to sign up for Future Schools" do
-    visit "/"
-    within "#signup" do
-      expect(page).to have_selector "a[href*=airtable]"
-    end
-  end
-
   scenario "to see a preview of uncached pages" do
     visit "/preview"
     expect(page).to have_content "The Future Project"
