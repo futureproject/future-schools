@@ -1,9 +1,9 @@
 :pages:
-  :bases: appFCtjOFWoba8ipk
+  :base_id: appFCtjOFWoba8ipk
   :table_name: Pages
 :slides:
-  :bases: appFCtjOFWoba8ipk
+  :base_id: appFCtjOFWoba8ipk
   :table_name: Slides
 :signups:
-  :bases: appFCtjOFWoba8ipk
+  :base_id: appFCtjOFWoba8ipk
   :table_name: Signups
