@@ -10,7 +10,7 @@ Dir["#{App.root}/spec/support/*.rb"].each {|f| require f }
 Capybara.app = Rack::Builder.parse_file(File.expand_path('../../config.ru', __FILE__)).first
 
 Capybara.default_selector = :css
-Capybara.javascript_driver = :webkit
+Capybara.javascript_driver = :poltergeist
 #Capybara.default_driver = :webkit
 
 RSpec.configure do |config|

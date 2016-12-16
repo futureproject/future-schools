@@ -1,4 +1,4 @@
-ruby '2.3.1'
+ruby '2.3.3'
 source 'https://rubygems.org'
 gem 'sinatra', require: false
 gem 'sinatra-contrib', require: false
@@ -16,8 +16,8 @@ gem 'redcarpet'
 group :development, :test do
   gem 'rspec'
   gem 'capybara'
+  gem 'poltergeist', require: "capybara/poltergeist"
   gem 'rerun'
-  gem 'capybara-webkit'
   gem 'pry'
   gem 'dotenv'
   gem 'launchy'
